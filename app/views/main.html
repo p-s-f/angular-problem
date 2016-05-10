@@ -2,27 +2,31 @@
   <h1>Lunch Maker 2000</h1>
 
     <hr>
-    <h2>Sandwich Items</h2>
-    <p ng-repeat="breakfastItem in breakfastItems">
-      <button ng-click="addItem(breakfastItem)">{{breakfastItem}}</button>
-    </p>
-
-    <h4 ng-repeat="item in mySandwich">
-      {{item.item}}
-    </h4>
-
-    <hr>
-
-    <div>
-      <p>
-        <button ng-click="addSandwichToLunchBox()"><h3>Make the sarnie</h3></button>
+    <div class="sandwichMaker">
+      <h2>Sandwich Items</h2>
+      <p ng-repeat="breakfastItem in breakfastItems">
+        <button ng-click="addItem(breakfastItem)">{{breakfastItem}}</button>
       </p>
+
+      <h4 ng-repeat="item in mySandwich">
+        {{item.item}}
+      </h4>
+
+      <hr>
+
+      <div>
+        <p>
+          <button ng-click="addSandwichToLunchBox()"><h3>Make the sarnie</h3></button>
+        </p>
+      </div>
     </div>
     <hr>
-    <h2>Lunchbox</h2>
-    <div>
-      <p ng-repeat="sarnie in lunchbox">
-        {{sarnie.item}}
-      </p>
+    <div class="lunchbox">
+      <h2>Lunchbox</h2>
+      <div>
+        <p ng-repeat="sarnie in lunchbox">
+          {{sarnie.item}}
+        </p>
+      </div>
     </div>
 </div>
