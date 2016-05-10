@@ -1,0 +1,49 @@
+<div class="container">
+  <h2>My todos</h2>
+
+  <!-- Todos input -->
+  <form role="form" ng-submit="addTodo()">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="todo" placeholder="What needs to be done?" class="form-control">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary" value="Add">
+        </span>
+      </div>
+    </div>
+  </form>
+
+  <a href="#/settings"> SETTINGS </a>
+
+    <!-- Todos list -->
+    <p class="form-group" ng-repeat="breakfastItem in breakfastItems">
+      <button ng-click="addItem(breakfastItem)">{{breakfastItem}}</button>
+    </p>
+
+    <p ng-repeat="item in mySandwich">
+      {{item.item}} ,
+    </p>
+    <hr>
+    <div>
+      <p>
+        <button ng-click="addSandwichToLunchBox()">Make the sarnie</button>
+      </p>
+    </div>
+    <hr>
+    <div>
+      <p class="form-group" ng-repeat="sarnie in lunchbox">
+        {{sarnie.item}}
+      </p>
+    </div>
+    <form role="form" ng-submit="addTodo()">
+      <div class="row">
+        <div class="input-group">
+          <input type="text" ng-model="lunchbox" placeholder="Lunchbox" class="form-control">
+          <span class="input-group-btn">
+            <input type="submit" class="btn btn-primary" value="Make the sarnie">
+          </span>
+        </div>
+      </div>
+    </form>
+
+</div>
