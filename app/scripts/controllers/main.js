@@ -23,6 +23,10 @@ angular.module('angularProblemApp')
         sarnie += $scope.mySandwich[i].item + ' ';
       }
 
+      if (sarnie === 'Bacon Egg Sausage Tomato ') {
+        sarnie = 'B.E.S.T';
+      }
+
       $scope.lunchbox.push({ item: sarnie });
       $scope.mySandwich = [];
     };

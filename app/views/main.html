@@ -1,51 +1,28 @@
 <div class="container">
-  <h2>My todos</h2>
+  <h1>Lunch Maker 2000</h1>
 
-  <!-- Todos input -->
-  <form role="form" ng-submit="addTodo()">
-    <div class="row">
-      <div class="input-group">
-        <input type="text" ng-model="todo" placeholder="What needs to be done?" class="form-control">
-        <span class="input-group-btn">
-          <input type="submit" class="btn btn-primary" value="Add">
-        </span>
-      </div>
-    </div>
-  </form>
-
-  <a href="#/settings"> SETTINGS </a>
-
-    <!-- Todos list -->
-    <p class="form-group" ng-repeat="breakfastItem in breakfastItems">
+    <hr>
+    <h2>Sandwich Items</h2>
+    <p ng-repeat="breakfastItem in breakfastItems">
       <button ng-click="addItem(breakfastItem)">{{breakfastItem}}</button>
     </p>
 
-    <p ng-repeat="item in mySandwich">
-      {{item.item}} ,
-    </p>
+    <h4 ng-repeat="item in mySandwich">
+      {{item.item}}
+    </h4>
 
     <hr>
 
     <div>
       <p>
-        <button ng-click="addSandwichToLunchBox()">Make the sarnie</button>
+        <button ng-click="addSandwichToLunchBox()"><h3>Make the sarnie</h3></button>
       </p>
     </div>
     <hr>
+    <h2>Lunchbox</h2>
     <div>
-      <p class="form-group" ng-repeat="sarnie in lunchbox">
+      <p ng-repeat="sarnie in lunchbox">
         {{sarnie.item}}
       </p>
     </div>
-    <form role="form" ng-submit="addTodo()">
-      <div class="row">
-        <div class="input-group">
-          <input type="text" ng-model="lunchbox" placeholder="Lunchbox" class="form-control">
-          <span class="input-group-btn">
-            <input type="submit" class="btn btn-primary" value="Make the sarnie">
-          </span>
-        </div>
-      </div>
-    </form>
-
 </div>
