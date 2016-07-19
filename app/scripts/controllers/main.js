@@ -10,24 +10,11 @@
 angular.module('angularProblemApp')
   .controller('MainCtrl', function ($scope) {
     $scope.breakfastItems = ['Bacon', 'Egg', 'Sausage', 'Tomato', 'Black Pudding'];
-    $scope.mySandwich = [];
-    $scope.addItem = function (item) {
-      $scope.mySandwich.push({ item: item });
-    };
 
     $scope.lunchbox = [];
 
-    $scope.addSandwichToLunchBox = function () {
-      var sarnie = '';
-      for (var i = 0; i < $scope.mySandwich.length; i++) {
-        sarnie += $scope.mySandwich[i].item + ' ';
-      }
-
-      if (sarnie === 'Bacon Egg Sausage Tomato ') {
-        sarnie = 'B.E.S.T';
-      }
-
-      $scope.lunchbox.push({ item: sarnie });
-      $scope.mySandwich = [];
+    $scope.addItems = function (params) {
+      console.log('PARAMS: ' + params.lunch);
+      $scope.lunchbox.push(params);
     };
   });
