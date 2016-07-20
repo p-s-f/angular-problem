@@ -7,14 +7,15 @@
  * # MainCtrl
  * Controller of the angularProblemApp
  */
-angular.module('angularProblemApp')
+
+ angular.module('angularProblemApp')
   .controller('MainCtrl', function ($scope) {
     $scope.breakfastItems = ['Bacon', 'Egg', 'Sausage', 'Tomato', 'Black Pudding'];
+    $scope.breakfastItemsAlt = ['Ham', 'Cheese', 'Salad', 'Chips', 'Hash Brown'];
 
     $scope.lunchbox = [];
 
     $scope.addItems = function (params) {
-      console.log('PARAMS: ' + params.lunch);
       $scope.lunchbox.push(params);
     };
   });

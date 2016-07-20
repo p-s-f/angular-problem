@@ -12,6 +12,7 @@ angular.module('angularProblemApp')
 
      var that = this;
      $scope.mySandwich = [];
+
      $scope.addItem = function (item) {
        $scope.mySandwich.push({ item: item });
      };

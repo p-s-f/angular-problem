@@ -2,10 +2,17 @@
   <h1>Lunch Maker 2000</h1>
 
   <hr>
-  <div class="sandwichMaker">
+  <div class="sandwichMaker" style="width:50%; display:inline-block;">
     <sarnie add-items="addItems(params)" breakfast-items="breakfastItems"/>
+  </div><!--
+
+  --><div class="sandwichMaker" style="width:50%; display:inline-block;">
+    <sarnie add-items="addItems(params)" breakfast-items="breakfastItemsAlt"/>
+  </div>
+
     <hr>
-    <div class="lunchbox">
+
+    <div class="lunchbox" >
       <h2>Lunchbox</h2>
       <div>
         <p ng-repeat="sarnie in lunchbox">
